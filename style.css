@@ -43,7 +43,7 @@ body {
   box-sizing: border-box;
 }
 .container .todo-box .add-todo button {
-  background-color: red;
+  background-color: #f42d2d;
   position: absolute;
   left: 90%;
   top: 50%;
@@ -54,14 +54,20 @@ body {
   font-weight: 800;
   height: 35px;
   width: 100px;
-
+  transition: all 0.25s ease-in;
   border-radius: 100px;
+  cursor: pointer;
+}
+.container .todo-box .add-todo button:hover {
+  background-color: #9a4444;
 }
 
 .todo-box .todo-lists {
   list-style: none;
   padding: 0px;
   margin: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .container .todo-box .todo-lists li {
@@ -71,6 +77,9 @@ body {
   align-items: center;
   cursor: pointer;
   position: relative;
+}
+.container .todo-box .todo-lists:hover li {
+  color: #36420b;
 }
 .container .todo-box .todo-lists li span {
   position: absolute;
